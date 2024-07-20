@@ -1,0 +1,21 @@
+name: CD Pipeline
+
+on:
+  workflow_run:
+    workflows: ['CI Pipeline']
+    types:
+      - completed
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Delete old images
+        run: sudo docker image prune -f
+      - name: Pull Docker image
+        run: sudo docker pull eliotatlani31/nestjs-app:latest
+      - name: Delete Old Docker
+        run: sudo docker rm -f nestjs-app || true
+      - name: Run Docker container
+        run: sudo docker compose up --build -d
