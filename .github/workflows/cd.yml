@@ -12,10 +12,16 @@ jobs:
 
     steps:
       - name: Delete old images
-        run: sudo docker image prune -f
+        run: sudo docker system prune -a -f --volumes || true
       - name: Pull Docker image
-        run: sudo docker pull eliotatlani31/nestjs-app:latest
+        run: sudo docker pull eliotatlani31/file-converter:latest
       - name: Delete Old Docker
-        run: sudo docker rm -f nestjs-app || true
-      - name: Run Docker container
-        run: sudo docker compose up --build -d
+        run: sudo docker rm -f file-converter || true
+      - name:
+          Run Docker container
+          # Add more environment variables as needed
+        run: |
+          sudo docker run -d -p 8000:8000 \
+          -e NUM_CORES=2 \
+          --name file-converter \
+          eliotatlani31/file-converter

@@ -23,10 +23,12 @@
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",
+    "@nestjs/throttler": "^6.0.0",
     "archiver": "^7.0.1",
     "dotenv": "^16.4.5",
     "heic-convert": "^2.1.0",
     "heic2any": "^0.0.4",
+    "helmet": "^7.1.0",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",
     "sharp": "^0.33.4"

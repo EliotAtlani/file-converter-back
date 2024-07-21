@@ -26,4 +26,5 @@ EXPOSE 3000
 RUN npm run build
 
 # Start the application with PM2 using ecosystem file
-CMD ["pm2-runtime start ecosystem.config.js"]
+# To this:
+CMD ["pm2-runtime", "start", "ecosystem.config.js"]

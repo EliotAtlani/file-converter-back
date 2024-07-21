@@ -16,6 +16,6 @@ jobs:
         run: docker login -u eliotatlani31 -p $DOCKER_PASSWORD
 
       - name: Build the Docker image
-        run: docker build -t eliotatlani31/nestjs-app:latest .
+        run: docker build -t eliotatlani31/file-converter:latest .
       - name: Push to DockerHub
-        run: docker push eliotatlani31/nestjs-app:latest
+        run: docker push eliotatlani31/file-converter:latest
