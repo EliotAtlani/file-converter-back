@@ -170,8 +170,8 @@ export class ConvertorController {
           console.log((100 - parseInt(ratio)) / 100);
           const resizedBuffer = await sharp(file.buffer)
             .resize(
-              width * ((100 - parseInt(ratio)) / 100),
-              height * ((100 - parseInt(ratio)) / 100),
+              Math.round(width * ((100 - parseInt(ratio)) / 100)),
+              Math.round(height * ((100 - parseInt(ratio)) / 100)),
             )
             .toBuffer();
 
