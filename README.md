@@ -26,3 +26,16 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+## With Docker
+
+Build the image 
+
+```bash
+docker build -t <image-name> .
+```
+
+Run the container
+
+```bash
+docker run -d -p 3000:3000 test-docker
+```
