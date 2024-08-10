@@ -37,5 +37,5 @@ docker build -t <image-name> .
 Run the container
 
 ```bash
-docker run -d -p 3000:3000 test-docker
+docker run -d -p 3000:3000 <image-name>
 ```
