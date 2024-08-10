@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://fileswap.eliotatlani.fr/" target="blank"><img src="https://fileswap.eliotatlani.fr/assets/logo-B9jXNGHb.png" width="200" alt="Nest Logo" /></a>
+  <a href="https://fileswap.eliotatlani.fr/" target="blank"><img src="https://fileswap.eliotatlani.fr/assets/logo-B9jXNGHb.png" width="200" alt="FileSwap logo" /></a>
 </p>
 
 ## Description - FileSwap Backend
